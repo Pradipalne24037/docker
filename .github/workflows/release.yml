@@ -21,7 +21,7 @@ jobs:
         run: docker login -u trainingpradip2244 -p ${{secrets.DOCKER_PASSWORD }}
 
       - name: build image
-        run: docker build --file Dockerfile --tag trainingpradip2244/docker-demo:v2.2.0  #docker build --file Dockerfile -t trainingpradip2244/docker-demo:${{github.ref_name}}
+        run: docker build --file Dockerfile --tag trainingpradip2244/docker-demo:v1  . #docker build --file Dockerfile -t trainingpradip2244/docker-demo:${{github.ref_name}}
 
       - name: push image to docker hub
-        run: docker push trainingpradip2244/docker-demo:v2.2.0   #docker push trainingpradip2244/docker-demo:${{github.ref_name}}
+        run: docker push trainingpradip2244/docker-demo:v1   #docker push trainingpradip2244/docker-demo:${{github.ref_name}}
