@@ -3,14 +3,10 @@ on:
   push:
     tags: 
         - "*"
-    branches:
-      - main  # Triggers on push to the main branch
-
-# Defines the jobs that will run
+   
 jobs:
   build:
-    runs-on: ubuntu-latest  # The environment where the job will run
-
+    runs-on: ubuntu-latest  
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
